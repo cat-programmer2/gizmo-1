@@ -1,11 +1,9 @@
 import aiogram
 from aiogram import Bot, Dispatcher, executor, types
-import aiohttp
 import logging
 import random
 import asyncio
 import json
-import os
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -224,7 +222,5 @@ async def translate(message: types.Message):
 
 # Run the bot
 if __name__ == '__main__':
-    print(os.listdir('.'))
-    print(tran_string('абвгд', 'china'))
     logger.info("Starting bot...")
     executor.start_polling(dp, skip_updates=True)
