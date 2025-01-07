@@ -162,7 +162,7 @@ def chance(chance):
 
 @dp.message_handler(commands=['start'])
 async def start(message: types.Message):
-    await bot.send_message(chat_id=message.chat.id, text=START_MSG)
+    await message.reply(START_MSG)
 
 @dp.message_handler(commands=['copy'])
 async def start(message: types.Message):
